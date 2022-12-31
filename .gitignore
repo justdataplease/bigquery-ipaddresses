@@ -1,0 +1,5 @@
+.idea/
+.git/
+.env
+notes.txt
+*.csv
