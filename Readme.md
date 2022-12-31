@@ -2,7 +2,7 @@
 
 We will gather a collection of random IP addresses from the internet and treat each one as a unique customer. We will then simulate some fake orders to analyze customer behavior based on their location.
 
-If you want to just test or use this functionality in BigQuery, without implementing it, go to — 8. IP Address Geographical Distribution Public Demo.
+If you want to just test or use this functionality in BigQuery, without implementing it, go to — 8. IP Address Geolocation Public Demo.
 
 ## How to reproduce
 
