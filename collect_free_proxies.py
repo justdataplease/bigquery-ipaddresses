@@ -5,7 +5,7 @@ from random import betavariate
 from datetime import datetime
 
 
-def download_and_save_csv(url, filename):
+def save_ipaddresses(url, filename):
     # Send a request to the URL and get the response
     response = requests.get(url)
 
@@ -68,7 +68,7 @@ def create_fake_orders(filename, customer_ids, number, from_date, to_date):
 def main():
     # Download IP Addresses
     url = "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt"
-    customer_ids = download_and_save_csv(url, filename="free-proxies.csv")
+    customer_ids = save_ipaddresses(url, filename="free-proxies.csv")
 
     # Create fake orders
     from_date = "2021-01-01"

@@ -2,7 +2,7 @@
 
 We will gather a collection of random IP addresses from the internet and treat each one as a unique customer. We will then simulate some fake orders to analyze customer behavior based on their location.
 
-If you want to just test or use this functionality in BigQuery, without implementing it, go to — 8. IP Address Geolocation Public Demo.
+If you want to just test or use this functionality in BigQuery, without implementing it, go to — 8. IP Address geographic distribution Public Demo.
 
 ## How to reproduce
 
@@ -103,7 +103,7 @@ Finally, to create the new tables we should run the following:
 ### 5. Create a sample dataset
 
 For educational purposes,  we will use a list of free HTTP proxy addresses as IPv4 Addresses. These addresses are collected daily in [this GitHub](https://github.com/TheSpeedX/PROXY-List) repository.  
-In this example, we will only use IPv4 addresses but if you want to also test IPv6 addresses check out section 8. IP Address Geolocation Public Demo.
+In this example, we will only use IPv4 addresses but if you want to also test IPv6 addresses check out section 8. IP Address geographic distribution Public Demo.
 
 We will also assume that these IP Addresses identify customers — an ip_address is a customer_id — and we will generate some fake orders in order to inspect behavioral patterns.
 
@@ -120,7 +120,7 @@ To upload free-proxies.csv and fake-orders.csv to BigQuery we should run the fol
 
       bq load --replace --location=eu --project_id=<your-project-id> --skip_leading_rows=1 ip_address.example_orders fake-orders.csv "customer_id:STRING,amount:FLOAT,datetime:DATETIME"
 
-### 7. IP Address Geolocation
+### 7. IP Address geographic distribution
 
 In this step we will retrieve geolocation information (i.e Country and City) for the IP Addresses we have collected in Step 5. We will also materialize the results into a table in order to use it for further analysis.
 
@@ -194,7 +194,7 @@ We will also merge the above table with the table that includes the fake orders 
     SELECT * FROM eu.example_orders o
     JOIN eu.example_ip_addresses_with_location l ON l.ip_address=o.customer_id
 
-### 8. IP Address Geolocation Public Demo
+### 8. IP Address geographic distribution Public Demo
 
 We can also test or use the IP Address Lookup functionality in BigQuery without implementing it, by using the publicly
 available dataset (eu.geolite2_city_ipv6 , eu.geolite2_city_ipv6). Keep in mind that this dataset will not get updated.
