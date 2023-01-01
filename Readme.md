@@ -109,7 +109,7 @@ We will also assume that these IP Addresses identify customers — an ip_address
 
 Inside the file collect_free_proxies.py, we can find 2 functions:
 
-The save_ipaddresses() function retrieves and returns HTTP proxy addresses. The create_fake_orders() function generates 100,000 fake orders for the years 2021-2023, with random amounts and timestamps chosen uniformly from a range. To create diverse customer behavior patterns for each order, a customer is randomly selected with a probability from the Beta(2,2) distribution.
+The save_ipaddresses() function retrieves and returns a list of HTTP proxy addresses. The create_fake_orders() function generates 100,000 fake orders for the years 2021-2023, with random amounts and timestamps chosen uniformly from a range. To create diverse customer behavior patterns for each order, a customer is randomly selected with a probability from the Beta(2,2) distribution.
 
 We can initiate both functions by running the following:
 

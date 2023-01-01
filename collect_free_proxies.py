@@ -5,7 +5,13 @@ from random import betavariate
 from datetime import datetime
 
 
-def save_ipaddresses(url, filename):
+def save_ipaddresses(url: str, filename: str) -> list:
+    """
+    This function retrieves and returns a list of HTTP proxy addresses. It is also write them into a CSV.
+    :param url: GitHub url to get the list of HTTP proxy addresses
+    :param filename: The name of the output CSV
+    :return:
+    """
     # Send a request to the URL and get the response
     response = requests.get(url)
 
@@ -29,12 +35,28 @@ def save_ipaddresses(url, filename):
     return lines
 
 
-def random_choice(lst, a=2, b=2):
+def random_choice(lst: list, a: int = 2, b: int = 2) -> str:
+    """
+    Select randomly and element from a list with probability from the Beta distribution.
+    :param lst:
+    :param a:
+    :param b:
+    :return:
+    """
     index = int(betavariate(a, b) * len(lst))
     return lst[index]
 
 
-def create_fake_orders(filename, customer_ids, number, from_date, to_date):
+def create_fake_orders(filename: str, customer_ids: list, number: int, from_date: datetime, to_date: datetime) -> None:
+    """
+    This function generates fake orders for a list of customer_ids.
+    :param filename:
+    :param customer_ids:
+    :param number:
+    :param from_date:
+    :param to_date:
+    :return:
+    """
     fake = Factory.create()
     lines = []
 
