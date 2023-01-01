@@ -38,9 +38,9 @@ def save_ipaddresses(url: str, filename: str) -> list:
 def random_choice(lst: list, a: int = 2, b: int = 2) -> str:
     """
     Select randomly and element from a list with probability from the Beta distribution.
-    :param lst:
-    :param a:
-    :param b:
+    :param lst: A list to select a random element
+    :param a: Beta parameter a
+    :param b: Beta parameter b
     :return:
     """
     index = int(betavariate(a, b) * len(lst))
