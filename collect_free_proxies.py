@@ -49,10 +49,10 @@ def random_choice(lst: list, a: int = 2, b: int = 2) -> str:
 
 def create_fake_orders(filename: str, customer_ids: list, number: int, from_date: datetime, to_date: datetime) -> None:
     """
-    This function generates fake orders for a list of customer_ids.
-    :param filename:
-    :param customer_ids:
-    :param number:
+    This function generates fake orders for a list of customer_ids. It writes the results into a CSV.
+    :param filename: The name of the output CSV
+    :param customer_ids: The list of customer_ids
+    :param number: The number of orders to generate
     :param from_date:
     :param to_date:
     :return:
