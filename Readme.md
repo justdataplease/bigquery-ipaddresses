@@ -107,10 +107,16 @@ In this example, we will only use IPv4 addresses but if you want to also test IP
 
 We will also assume that these IP Addresses identify customers — an ip_address is a customer_id — and we will generate some fake orders in order to inspect behavioral patterns.
 
+Inside the file collect_free_proxies.py, we can find 2 functions:
+
+The save_ipaddresses() function retrieves and returns HTTP proxy addresses. The create_fake_orders() function generates 100,000 fake orders for the years 2021-2023, with random amounts and timestamps chosen uniformly from a range. To create diverse customer behavior patterns for each order, a customer is randomly selected with a probability from the Beta(2,2) distribution.
+
+We can initiate both functions by running the following:
+
     cd ..
     python collect_free_proxies.py
 
-As a result, we will get a CSV file called free-proxies.csv which we will upload to BigQuery.
+As a result, we will get a CSV file called free-proxies.csv and a CSV called fake-orders.csv which we will upload to BigQuery. 
 
 ### 6. Upload IP Addresses to BigQuery
 
