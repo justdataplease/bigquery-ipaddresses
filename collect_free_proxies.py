@@ -53,8 +53,8 @@ def create_fake_orders(filename: str, customer_ids: list, number: int, from_date
     :param filename: The name of the output CSV
     :param customer_ids: The list of customer_ids
     :param number: The number of orders to generate
-    :param from_date: Date span used to generate random timstamp
-    :param to_date: Date span used to generate random timstamp
+    :param from_date: Date span used to generate random timestamp (%Y-%m-%d)
+    :param to_date: Date span used to generate random timestamp (%Y-%m-%d)
     :return:
     """
     fake = Factory.create()
