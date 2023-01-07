@@ -1,5 +1,7 @@
 # Understanding IP Addresses for Data Analysis - A practical example using BigQuery
 
+Read original article [here](https://medium.com/mlearning-ai/extend-bigquery-nlp-armory-with-stemmers-995fae853b0e).
+
 We will gather a collection of random IP addresses from the internet and treat each one as a unique customer. We will then simulate some fake orders to analyze customer behavior based on their location.
 
 If you want to just test or use this functionality in BigQuery, without implementing it, go to — 8. IP Address geographic distribution Public Demo.
