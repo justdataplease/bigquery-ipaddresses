@@ -1,6 +1,6 @@
 # Understanding IP Addresses for Data Analysis - A practical example using BigQuery
 
-Read original article [here](https://medium.com/mlearning-ai/extend-bigquery-nlp-armory-with-stemmers-995fae853b0e).
+Read original article [here](https://medium.com/geekculture/understanding-ip-addresses-for-data-analysis-a-practical-example-using-bigquery-3a6d409e977f).
 
 We will gather a collection of random IP addresses from the internet and treat each one as a unique customer. We will then simulate some fake orders to analyze customer behavior based on their location.
 
