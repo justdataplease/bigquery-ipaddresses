@@ -272,6 +272,10 @@ The following example is for Europe-based (eu) data sets.
     UNION ALL
     SELECT * FROM ipv6d_addresses
 
+or by using the following public table function (created by Author — JustFunctions)
+
+    SELECT * FROM `justfunctions.eu.ip_lookup`("2a02:587:b213:7db4:462e:5d32:93ea:76e8,62.38.6.90,69.162.81.155")
+
 We can also directly use the final table we have created in Step 7 for analysis:
 
     SELECT * FROM `justfunctions.eu.example_orders_with_location`
