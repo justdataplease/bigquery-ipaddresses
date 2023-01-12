@@ -276,6 +276,39 @@ or by using the following public table function (created by Author — JustFunct
 
     SELECT * FROM `justfunctions.eu.ip_lookup`("2a02:587:b213:7db4:462e:5d32:93ea:76e8,62.38.6.90,69.162.81.155")
 
+Output
+
+    1	
+    network_bin : KgIFh7AAAAAAAAAAAAAAAA==
+    mask : 38
+    ip_address : 2a02:587:b213:7db4:462e:5d32:93ea:76e8
+    city_name : Piraeus
+    country_iso_code : GR
+    country_name : Greece
+    latitude : 37.964
+    longitude : 23.6359
+
+    2	
+    network_bin : PiYGAA==
+    mask : 24
+    ip_address : 62.38.6.90
+    city_name : Thessaloniki
+    country_iso_code : GR
+    country_name : Greece
+    latitude : 40.6381
+    longitude : 22.9455
+
+    3	
+    network_bin : RaJQAA==
+    mask : 20
+    ip_address : 69.162.81.155
+    city_name : null
+    country_iso_code : US
+    country_name : United States
+    latitude : 37.751
+    longitude : -97.822
+
+
 We can also directly use the final table we have created in Step 7 for analysis:
 
     SELECT * FROM `justfunctions.eu.example_orders_with_location`
